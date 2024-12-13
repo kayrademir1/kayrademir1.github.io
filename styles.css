@@ -1,130 +1,116 @@
-/* General styles */
+/* General reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Header styles */
 header {
-    background-color: #004d99;
-    color: #fff;
-    padding: 15px 0;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
 }
 
-h1 {
-    font-size: 2em;
+header h1 {
+    font-size: 1.8rem;
     margin: 0;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+header nav ul li {
+    display: inline;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
     text-decoration: none;
-    font-size: 1.1em;
+    color: #007acc;
+    font-weight: bold;
 }
 
-/* Main Content styles */
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styles */
 main {
+    width: 90%;
     max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 15px;
+    margin: 20px auto;
 }
 
-h2 {
-    font-size: 2em;
+/* Style for list items */
+.posts-list, .about-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Ensures the text is aligned to the left */
 }
 
-p {
-    line-height: 1.6;
-    font-size: 1.1em;
+.posts-list li, .about-list li {
     margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.posts-list a, .about-list a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007acc;
+    text-decoration: none;
+}
+
+.posts-list a:hover, .about-list a:hover {
+    text-decoration: underline;
+}
+
+.posts-list p, .about-list p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* About page specific styles */
+.about-section {
+    margin: 20px 0;
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    color: #444;
+    line-height: 1.6;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
+    background-color: #f8f8f8;
     text-align: center;
-    font-size: 1em;
-    margin-top: auto;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    footer {
-        font-size: 0.9em;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.3em;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-
-    footer {
-        font-size: 0.8em;
-        padding: 8px;
-    }
+footer p {
+    color: #555;
+    font-size: 0.9rem;
 }
